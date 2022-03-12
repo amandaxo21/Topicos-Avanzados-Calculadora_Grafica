@@ -5,7 +5,7 @@ import java.awt.*;
 public class CalculadoraGraf extends JFrame {
 
     JLabel Letrero, lblTotal;//Reserva el espacio en memoria
-    JButton btnBorrarTodo, btnDividir, btnPorcentaje, btnMulti, btnRestar, btnSuma, btnIgual, num1, num2, num3, num4, num5, num6, num7, num8, num9, num0, btnPunto;
+    JButton btnBorrarTodo, btnDividir, btnMulti, btnRestar, btnSuma, btnIgual, num1, num2, num3, num4, num5, num6, num7, num8, num9, num0, btnPunto;
     JTextField txtTotal;
     JPanel panel;
     
@@ -27,10 +27,8 @@ public class CalculadoraGraf extends JFrame {
         Color colorBtn=new Color(231, 182, 233); //Color para Botones numeros
         Color colorBtnOp=new Color(159, 213, 238); //Color para Botones operadores
 
-        btnBorrarTodo = new JButton("CE");
+        btnBorrarTodo = new JButton("Eliminar");
         btnBorrarTodo.setBackground(colorBtnOp);
-        btnPorcentaje = new JButton("%");
-        btnPorcentaje.setBackground(colorBtnOp);
         btnDividir = new JButton("/"); 
         btnDividir.setBackground(colorBtnOp);
         btnMulti = new JButton("*");
@@ -72,7 +70,6 @@ public class CalculadoraGraf extends JFrame {
         panel.add(txtTotal);
         panel.add(btnBorrarTodo);
         panel.add(btnDividir);
-        panel.add(btnPorcentaje);
         panel.add(btnMulti);
         panel.add(btnRestar);
         panel.add(num7);
@@ -103,11 +100,7 @@ public class CalculadoraGraf extends JFrame {
                 btnDividirActionPerformed(evt);
             }
         });
-        btnPorcentaje.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                btnPorcentajeActionPerformed(evt);
-            }
-        });
+       
         btnMulti.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 btnMultiActionPerformed(evt);
@@ -190,7 +183,6 @@ public class CalculadoraGraf extends JFrame {
         });
 
         setTitle("Calculadora");
-
         setContentPane(panel);
         setVisible(true);
     }
