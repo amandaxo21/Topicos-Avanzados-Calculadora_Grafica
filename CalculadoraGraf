@@ -253,7 +253,7 @@ public class CalculadoraGraf extends JFrame {
         float num1 = Float.parseFloat(guardados[0].trim());
         float num2 = Float.parseFloat(guardados[1].trim());
         if (funcion == 1) {
-            txtTotal.setText(Divicion(num1, num2) + "");
+            txtTotal.setText(Division(num1, num2) + "");
         } else {
             if (funcion == 3) {
                 txtTotal.setText(Multiplicacion(num1, num2) + "");
@@ -418,9 +418,9 @@ public class CalculadoraGraf extends JFrame {
         return multiplicacion;
     }
 
-    public static float Divicion(float num1, float num2) {
-        float divicion = num1 * num2;
-        return divicion;
+    public static float Division(float num1, float num2) {
+        float division = num1 / num2;
+        return division;
     }
 
     public static float Porcentaje(float num1) {
